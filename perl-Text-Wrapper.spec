@@ -1,12 +1,12 @@
 %define realname   Text-Wrapper
 
 Name:		perl-%{realname}
-Version:    1.000
-Release: %mkrel 3
+Version:    1.01
+Release: %mkrel 1
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:    Simple word wrapping routine perl module
-Source0:    ftp://ftp.perl.org/pub/CPAN/modules/by-module/Text/%{realname}-%{version}.tar.bz2
+Source0:    ftp://ftp.perl.org/pub/CPAN/modules/by-module/Text/%{realname}-%{version}.tar.gz
 Url:		http://search.cpan.org/dist/%{realname}
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	perl-devel
