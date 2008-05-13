@@ -1,8 +1,8 @@
 %define realname   Text-Wrapper
 
 Name:		perl-%{realname}
-Version:    1.01
-Release: %mkrel 2
+Version:    1.02
+Release: %mkrel 1
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:    Simple word wrapping routine perl module
