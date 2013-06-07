@@ -1,19 +1,18 @@
 %define upstream_name    Text-Wrapper
-%define upstream_version 1.02
-
+%define upstream_version 1.04
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Version:    %perl_convert_version 1.04
+Release:    1
 
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Summary:    Simple word wrapping routine perl module
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:    ftp://ftp.perl.org/pub/CPAN/modules/by-module/Text/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:    ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Text/Text-Wrapper-1.04.tar.gz
 
 BuildRequires:	perl(Module::Build)
+BuildRequires:	perl-devel
 BuildArch: noarch
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Text::Wrapper provides simple word wrapping. It breaks long lines, but does 
@@ -31,15 +30,10 @@ sophisticated text formatting, try the Text::Format module.
 make test
 
 %install
-rm -rf $RPM_BUILD_ROOT
 %makeinstall_std
-rm -rf $RPM_BUILD_ROOT/%{perl_vendorarch}
-
-%clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}/%{perl_vendorarch}
 
 %files
-%defattr(-,root,root)
 %doc Changes README
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
@@ -73,7 +67,7 @@ rm -rf $RPM_BUILD_ROOT
 - 1.01
 
 
-* Fri Apr 28 2006 Nicolas Lécureuil <neoclust@mandriva.org> 1.000-3mdk
+* Fri Apr 28 2006 Nicolas LÃ©cureuil <neoclust@mandriva.org> 1.000-3mdk
 - Fix SPEC according to Perl Policy
 	- Source URL
 
@@ -82,4 +76,5 @@ rm -rf $RPM_BUILD_ROOT
 
 * Sat Oct 01 2005 Michael Scherer <misc@mandriva.org> 1.000-1mdk
 - First mandriva package
+
 
