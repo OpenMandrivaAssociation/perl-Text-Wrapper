@@ -1,14 +1,14 @@
 %define upstream_name    Text-Wrapper
-%define upstream_version 1.04
+%define upstream_version 1.05
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version 1.04
+Version:    %perl_convert_version %{upstream_version}
 Release:    1
 
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Summary:    Simple word wrapping routine perl module
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:    ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Text/Text-Wrapper-1.04.tar.gz
+Source0:    ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Text/Text-Wrapper-%{upstream_version}.tar.gz
 
 BuildRequires:	perl(Module::Build)
 BuildRequires:	perl-devel
@@ -76,5 +76,6 @@ rm -rf %{buildroot}/%{perl_vendorarch}
 
 * Sat Oct 01 2005 Michael Scherer <misc@mandriva.org> 1.000-1mdk
 - First mandriva package
+
 
 
