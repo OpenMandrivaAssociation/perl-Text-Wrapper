@@ -7,7 +7,7 @@ Release:    3
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Summary:    Simple word wrapping routine perl module
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:    ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Text/Text-Wrapper-%{upstream_version}.tar.gz
 
 BuildRequires:	perl(Module::Build)
